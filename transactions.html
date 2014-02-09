@@ -6,17 +6,7 @@
  
 	<!-- JavaScript -->
 	<script type="text/javascript">
-		// Put code here or set the src attribute
-	</script>
- 
-	<!-- CSS -->
- 	<link rel="stylesheet" type="text/css" href="style.css">
-
-</head>
- 
-<body>
- 
- var my_media = null;
+		 var my_media = null;
 var mediaTimer = null;
 function playAudio(src) {
     // Create Media object from src
@@ -52,6 +42,16 @@ function onError(error) {
         'message: ' + error.message + '\n');
 }
  
+	</script>
+ 
+	<!-- CSS -->
+ 	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+ 
+<body>
+ 
+
  
 document.addEventListener("deviceready", function () {
     $("#Yes").on("click", function () {
