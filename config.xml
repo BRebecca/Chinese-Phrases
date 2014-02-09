@@ -13,10 +13,10 @@
         <preference name="phonegap-version" value="3.1.0" />
 	<gap:plugin name="org.apache.cordova.media" />
 
-        <name>Chinese Quick Phrase.xml</name>
+        <name>Chinese Quick Phrase</name>
 
         <description>
-        An example for phonegap build docs. 
+        Chinese quick phrases for English speaking tourists visiting the country.
         </description>
 
 
