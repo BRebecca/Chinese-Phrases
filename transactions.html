@@ -7,6 +7,17 @@
 	<!-- JavaScript -->
 <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script> 
 	<script type="text/javascript">
+	
+
+document.addEventListener("deviceready", function () {
+    $("#btnYes").on("click", function () {
+        playAudio(/android_asset/www/audio/basic/yes.mp3);
+    });
+    $("#btnNo").on("click", function () {
+        playAudio(/android_asset/www/audio/basic/no.mp3);
+    });
+}, false);
+
 		var my_media = null;
 var mediaTimer = null;
 function playAudio(src) {
@@ -33,16 +44,8 @@ function onError(error) {
  
 <body>
  
-<script type="text/javascript">
-document.addEventListener("deviceready", function () {
-    $("#btnYes").on("click", function () {
-        playAudio(/android_asset/www/audio/basic/yes.mp3);
-    });
-    $("#btnNo").on("click", function () {
-        playAudio(/android_asset/www/audio/basic/no.mp3);
-    });
-}, false);
-</script>
+
+
 
 	<button class="button" id="btnYes">Yes</button>
 	<button class="button" id="btnNo">No</button>
