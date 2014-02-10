@@ -7,10 +7,10 @@
         <script type="text/javascript" charset="utf-8">
 
    document.addEventListener("deviceready", function () {
-    $("#btnYes").on("click", function () {
+    $("#Yes").on("click", function () {
         playAudio(audio/basic/yes.mp3);
     });
-    $("#btnNo").on("click", function () {
+    $("#No").on("click", function () {
         playAudio(audio/basic/no.mp3);
     });
 }, false);
@@ -35,7 +35,7 @@ function onError(error) {
       </head>
       <body>
       
-      <a href="#" class="button" onclick="playAudio('/android_asset/www/audio/basic/yes.mp3');">Yes</a>
+      <a href="#Yes" class="button" onclick="playAudio('/android_asset/www/audio/basic/yes.mp3');">Yes</a>
       
       </body>
     </html>
