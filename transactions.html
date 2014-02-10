@@ -7,31 +7,13 @@
 	<!-- JavaScript -->
 <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script> 
 	<script type="text/javascript">
-		 var my_media = null;
+		var my_media = null;
 var mediaTimer = null;
 function playAudio(src) {
     // Create Media object from src
     my_media = new Media(src, onSuccess, onError);
     // Play audio
     my_media.play();
-    // Update my_media position every second
-    if (mediaTimer == null) {
-        mediaTimer = setInterval(function () {
-                // get my_media position
-                my_media.getCurrentPosition(
-                    // success callback
-                    function (position) {
-                    if (position > -1) {
-                        setAudioPosition((position) + " sec");
-                    }
-                },
-                // error callback
-                function (e) {
-                    console.log("Error getting pos=" + e);
-                    setAudioPosition("Error: " + e);
-                });
-            }, 1000);
-    }
 }
 // onSuccess Callback
 function onSuccess() {
@@ -42,7 +24,6 @@ function onError(error) {
     alert('code: ' + error.code + '\n' +
         'message: ' + error.message + '\n');
 }
- 
 	</script>
  
 	<!-- CSS -->
@@ -52,20 +33,20 @@ function onError(error) {
  
 <body>
  
-
- 
+<script type="javascript">
 document.addEventListener("deviceready", function () {
-    $("#Yes").on("click", function () {
-        playAudio(audio/basic/yes.mp3);
+    $("#btnYes").on("click", function () {
+        playAudio(/android_asset/www/audio/basic/yes.mp3);
     });
-    $("#No").on("click", function () {
-        playAudio(audio/basic/no.mp3);
+    $("#btnNo").on("click", function () {
+        playAudio(/android_asset/www/audio/basic/no.mp3);
     });
-	
-	
+}, false);
+</script>
+
 	<button class="button" id="Yes">Yes</button>
 	<button class="button" id="No">No</button>
-	<button class="button" id="#">Yes</button>
+
 	
  	
 </body>
