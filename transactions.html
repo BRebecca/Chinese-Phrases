@@ -13,7 +13,7 @@ document.addEventListener("deviceready", function () {
     $("#yes").on("click", function () {
         playAudio(/android_asset/www/audio/basic/yes.mp3);
     });
-    $("#btnNo").on("click", function () {
+    $("#no").on("click", function () {
         playAudio(/android_asset/www/audio/basic/no.mp3);
     });
 }, false);
@@ -47,8 +47,8 @@ function onError(error) {
 
 
 
-	<button class="button" id="yes" onclick="document.getElementById('yes').play()">Yes</button>
-	<button class="button" id="btnNo">No</button>
+	<button class="button" id="yes">Yes</button>
+	<button class="button" id="no">No</button>
 
 	
  	
